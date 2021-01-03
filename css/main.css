@@ -1,0 +1,174 @@
+@font-face {
+    font-family: Loew;
+    src: url("fonts/loew.otf") format("opentype");
+}
+@font-face {
+    font-family: Mazzard;
+    src: url("fonts/Adsız.otf") format("opentype");
+}
+.three{
+  position: absolute;
+  top:9px;
+  right:0;
+  width:90px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(44, 62, 90,0.8);
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.hamburger .line{
+  width: 40px;
+  height: 3px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  -o-transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  -o-transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
+}
+body{
+  margin: 0;
+  position:relative;
+  background: url(pc.jpg) black center no-repeat;
+  background-size: cover;
+  color:white;
+  width: 100%;
+  height:100%;
+}
+h1{
+  font-family: Loew;
+  text-shadow: -3px 2px 2px black;
+  font-size: 35px;
+  margin:5px;
+}
+.overlay{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height:1000%;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3)
+}
+.overlay-1{
+  position: fixed;
+  height:40vh;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+}
+.row{
+  display:flex;
+  margin-bottom:5px;
+}
+.db{
+  width:calc(50% - 5px);
+  text-align: left;
+  font-family: Mazzard;
+  font-size:16px;
+  padding:8px;
+  padding-bottom: 6px;
+  color:white;
+  outline: none;
+  border: none;
+}
+.dbb{
+  background:rgba(0,0,0,0.8);
+  padding-left: 4px;
+}
+.db1{
+  margin-left: 10px;
+}
+iframe{
+  width:470px;
+  height:258.979591837px;
+  background: rgba(0,0,0,0.8);
+}
+.main-content{
+  width:470px;
+  /*background: rgba(0,0,0,0.4);*/
+  position: relative;
+}
+.container{
+  padding: 5px 0 0 40px;
+}
+.logo{
+  position: absolute;
+  top:0;
+  right:0;
+  width:284px;
+}
+.thumbnail{
+  width:470px;
+}
+@media only screen and (max-width: 784px) {
+  body {
+    background: url(mobile.jpg) black center no-repeat;
+    background-size: cover;
+  }
+  .logo{
+    display: none;
+  }
+  .container{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+}
+@media only screen and (max-width: 508px) {
+  .thumbnail{
+    width:370px;
+  }
+  .main-content{
+    width:370px;
+  }
+  iframe{
+    width:370px;
+    height:203.87755102px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .thumbnail{
+    width:300px;
+  }
+  .main-content{
+    width:300px;
+  }
+  h1{font-size:30px;}
+  iframe{
+    width:300px;
+    height:165.306122449px;
+  }
+}

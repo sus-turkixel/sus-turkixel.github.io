@@ -178,7 +178,7 @@
       height: 203.87755102px;
     }
   }
-  @media only screen and (max-width: 380px) {
+  @media only screen and (max-width: 400px) {
     .thumbnail {
       width: 300px;
     }

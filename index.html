@@ -1,1 +1,48 @@
-Hello! IT works
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body oncontextmenu="return false">
+<div class="overlay"></div>
+<div class="overlay-1"></div>
+<img draggable="false" class="logo" src="logo.png">
+<div class="container">
+  <div class="main-content">
+    <div class="three col">
+    <div class="hamburger" id="hamburger-1">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </div>
+    <h1>BÖLÜMLER</h1>
+    <div class="row">
+      <select class="db dbb">
+        <option placeholder value="">SEZON SEÇ</option>
+        <option value="s1">SEZON 1</option>
+        <option value="s2">SEZON 2</option>
+        <option value="s3">SEZON 3</option>
+      </select>
+      <select class="db dbb db1">
+        <option placeholder value="">BÖLÜM SEÇ</option>
+        <option value="e1">1. Stormy Weather</option>
+        <option value="e2">2. The Bubbler</option>
+        <option value="e3">3. The Phar- oh, you get the point</option>
+      </select>
+    </div>
+    <iframe frameborder="0" src="https://miraculousladybug.org/epwatcher.php?e=1|1&lang=en&z=s&s=mlb&th=https://animatedshows.tk/img/101.jpg" allowfullscreen></iframe>
+    <h1>ÖZEL BÖLÜMLER</h1>
+    <img class="thumbnail" src="covid19.png"><br>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+  });
+});
+</script>
+</body>
+</html>

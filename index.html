@@ -67,6 +67,7 @@ $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows)
         document.querySelectorAll(".episode-select")[i].innerHTML+="<option value='e"+(k+1)+"'>"+(k+1)+". "+m["titles"]["tr"].split("||")[k+cumulativecount]+"</option>";
       }
   }
+  document.querySelector('.season-select').value="s3";
   selectSeason("s3");
 });
 $(document).ready(function(){

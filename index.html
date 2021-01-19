@@ -56,7 +56,7 @@ function selectSeason(ind){
 }
 
 function getEpisode(ep){
-  document.querySelector(".video").src=`https://tinyurl.com/yy7nao9q/epwatcher.php?e=${document.querySelector(".season-select").value.replace("s","")}|${ep.replace("e","")}&lang=tr&z=s&s=mlb&th=https://animatedshows.tk/img/301.jpg`;
+  document.querySelector(".video").src=`https://tinyurl.com/yy7nao9q/epwatcher.php?e=${document.querySelector(".season-select").value.replace("s","")}|${ep.split("_-_-_")[0].replace("e","")}&lang=tr&z=s&s=mlb&th=${ep.split("_-_-_")[1]}`;
 }
 $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows){
   var m = shows["miraculous"],cumulativecount=0;

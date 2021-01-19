@@ -43,7 +43,9 @@
 </div>
 <script>
 document.querySelector(".season-select").onchange=function(){
+  try{
   selectSeason(document.querySelector(".season-select").value);
+  }catch(e){}
 };
 function selectSeason(ind){
     for(var i=0;i<document.querySelectorAll(".episode-select").length;i++){

@@ -36,7 +36,7 @@
         <option placeholder value="">SEZON SEÇ</option>
       </select>
     </div>
-    <iframe frameborder="0" src="https://miraculousladybug.org/epwatcher.php?e=3|1&lang=tr&z=s&s=mlb&th=https://animatedshows.tk/img/301.jpg" allowfullscreen></iframe>
+    <iframe class="video" frameborder="0" src="https://tinyurl.com/yy7nao9q/epwatcher.php?e=3|1&lang=tr&z=s&s=mlb&th=https://animatedshows.tk/img/301.jpg" allowfullscreen></iframe>
     <h1>ÖZEL BÖLÜMLER</h1>
     <img class="thumbnail" src="css/covid19.png"><br><br>
   </div>
@@ -55,6 +55,9 @@ $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows)
       document.querySelector(".selects").innerHTML+=`<select class="db dbb db1 episode-select">
                                                       <option placeholder value="">BÖLÜM SEÇ</option>
                                                     </select>`;
+      document.querySelectorAll(".episode-select")[i].onchange=function(){
+        alert(document.querySelectorAll(".episode-select")[i].value);
+      }
       if(i-1!=-1){
         cumulativecount+=m["episodecount"][i-1];
       }

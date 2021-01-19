@@ -54,12 +54,9 @@ $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows)
   var m = shows["miraculous"],cumulativecount=0;
   for(var i=0;i<m["episodecount"].length;i++){
       document.querySelector(".season-select").innerHTML+="<option value='s"+(i+1)+"'>SEZON "+(i+1)+"</option>";
-      document.querySelector(".selects").innerHTML+=`<select class="db dbb db1 episode-select">
+      document.querySelector(".selects").innerHTML+=`<select onchange="alert(document.querySelectorAll('.episode-select')[${i}].value);" class="db dbb db1 episode-select">
                                                       <option placeholder value="">BÖLÜM SEÇ</option>
                                                     </select>`;
-      document.querySelectorAll(".episode-select")[i].onchange=function(){
-        alert(document.querySelectorAll(".episode-select")[i].value);
-      }
       if(i-1!=-1){
         cumulativecount+=m["episodecount"][i-1];
       }

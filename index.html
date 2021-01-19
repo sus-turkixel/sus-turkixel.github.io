@@ -46,9 +46,11 @@ function selectSeason(ind){
   try{
     if(ind){
       for(var i=0;i<document.querySelectorAll(".episode-select").length;i++){
-         document.querySelectorAll(".episode-select")[i].style.display="none";
+        try{
+         document.querySelectorAll(".episode-select")[i].classList.remove("episode-select-active");
+        }catch(e){}
       }
-      document.querySelectorAll(".episode-select")[Number(ind.replace("s",""))-1].style.display="block";
+      document.querySelectorAll(".episode-select")[Number(ind.replace("s",""))-1].classList.add("episode-select-active");
     }
   }catch(e){}
 }

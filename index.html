@@ -49,7 +49,7 @@ function selectSeason(ind){
     for(var i=0;i<document.querySelectorAll(".episode-select").length;i++){
        document.querySelectorAll(".episode-select")[i].style.display="none";
     }
-    document.querySelectorAll(".episode-select")[Number(ind.replace("s",""))-1].style.display=block;
+    document.querySelectorAll(".episode-select")[Number(ind.replace("s",""))-1].style.display="block";
 }
 $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows){
   var m = shows["miraculous"],cumulativecount=0;

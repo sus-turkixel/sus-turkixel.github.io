@@ -54,11 +54,17 @@ function selectSeason(ind){
     }
   }catch(e){}
 }
+var nformat = function(M) {
+    return M > 9 ? "" + M : "0" + M;
+}
+function getEpisode(ep){
+  alert(document.querySelector(".season-select").value.replace("s","")+nformat(Number(ep.replace("s",""))));
+}
 $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows){
   var m = shows["miraculous"],cumulativecount=0;
   for(var i=0;i<m["episodecount"].length;i++){
       document.querySelector(".season-select").innerHTML+="<option value='s"+(i+1)+"'>SEZON "+(i+1)+"</option>";
-      document.querySelector(".selects").innerHTML+=`<select onchange="alert(document.querySelectorAll('.episode-select')[${i}].value);" class="db dbb db1 episode-select">
+      document.querySelector(".selects").innerHTML+=`<select onchange="getEpisode(document.querySelectorAll('.episode-select')[${i}].value);" class="db dbb db1 episode-select">
                                                       <option placeholder value="">BÖLÜM SEÇ</option>
                                                     </select>`;
       if(i-1!=-1){

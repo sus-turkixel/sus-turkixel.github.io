@@ -53,7 +53,7 @@ $.getJSON("https://miraculousladybug.org/yt/epdata.php?j=epdat", function(shows)
       document.querySelector(".selects").innerHTML+=`<select class="db dbb db1 episode-select">
                                                       <option placeholder value="">BÖLÜM SEÇ</option>
                                                     </select>`;
-      for(var k=0;k<m["episodecount"][i];i++){
+      for(var k=0;k<m["episodecount"][i];k++){
         var sezb4=0;
         if(i-1!=-1){
           sezb4=m["episodecount"][i-1];
